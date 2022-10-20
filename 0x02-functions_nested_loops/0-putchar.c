@@ -13,6 +13,5 @@ int main(void)
 	{
 		_putchar(h[i]);
 	}
-	
 	return (0);
 }
