@@ -7,7 +7,6 @@
 */
 int main(void)
 {
-    printf("%s\n", NAME);
-
-    return (0);
+printf("%s\n", NAME);
+return (0);
 }
