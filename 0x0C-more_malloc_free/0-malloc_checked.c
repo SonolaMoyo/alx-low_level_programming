@@ -2,7 +2,7 @@
 
 /**
  * malloc_checked - Creates malloc with necessary memory size
- * @b - size of malloc
+ * @b: size of malloc
  * Return: Pointer to address of new space
 */
 
@@ -12,7 +12,7 @@ void *malloc_checked(unsigned int b)
 
 	p = malloc(b);
 
-	if(p == NULL)
+	if (p == NULL)
 	{
 		exit(98);
 	}
