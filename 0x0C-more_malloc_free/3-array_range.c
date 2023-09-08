@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * array_range - Creates an array of integers
- * @min: minimum integer
- * @max: maximum integer
- * Return: return pointer to an array of integers
+ * array_range - creates an array of integers
+ * @min: first number to be created
+ * @max: last number to be created
+ * Return: Pointer to address of new space
  */
 
 int *array_range(int min, int max)
@@ -15,16 +15,18 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	int rangeOfInt = max - min + 1;
 
-	p = malloc(sizeof(int) * rangeOfInt);
+	p = malloc(sizeof(int) * (max - min + 1));
+
 	if (p == NULL)
-		return (NULL);
-
-	for (i = 0; i < rangeOfInt; i++)
 	{
-		p[i] = min;
-		min++;
+		return (NULL);
 	}
+
+	for (i = min; i <= max; i++)
+	{
+		p[i - min] = i;
+	}
+
 	return (p);
 }
